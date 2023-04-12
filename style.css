@@ -1,0 +1,239 @@
+  :root{
+  --Mørkebrun-farve-i-navigationslinje-footer-slideshow-dots-og-som-skriftfarve: hsl(0, 49%, 8%);
+  --Lys-skriftfarve-på-mørkebrun-baggrund: hsl(0, 0%, 100%);
+ 
+  --Kontrast-skriftfarve-på-links-som-ikke-er-hvide:hsl(138, 65%, 17%);
+  
+  --Baggrundsfarve-ved-hover-over-menupunkter: hsla(0, 0%, 100%, 0.2);
+  
+  --Lysebrun-farve-ved-inaktive-slideshow-dots: hsl(0, 10%, 78%);
+  
+  --Baggrundsfarve-på-lightbox-overlay: hsla(0, 12%, 8%, 0.98); 
+
+  --SkriftFamilie: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} 
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+article {
+    margin: 15px;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    font-family: var(--SkriftFamilie);
+}
+
+.open {
+    margin: 8px;
+}
+
+.closed {
+    display: none;
+}
+
+/*----*/
+
+.Navgiason{display: none;}
+.show {
+    display:block;
+}
+.small{
+    height: 0.40%;
+    width: 10%;
+}
+ 
+.extent{
+    height: 10000%;
+    opacity: 90%;
+}
+
+/*----*/
+
+.mobile-container {
+    max-width: 480px;
+    margin: auto;
+    background-color: #555;
+    /* height: 500px; */
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .topnav ul {
+    display: none;
+  }
+  
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+nav {
+    background-color: var(--Mørkebrun-farve-i-navigationslinje-footer-slideshow-dots-og-som-skriftfarve);
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav img {
+    width: 10%;
+}
+nav > img, li img
+{
+    height: 50px;
+}
+
+footer img
+{
+    height: 75px;
+}
+
+img {
+    /*width: 100%;*/
+    height: auto;
+    max-width: 100%;
+}
+
+footer{
+    display: grid;
+    background-color:var(--Mørkebrun-farve-i-navigationslinje-footer-slideshow-dots-og-som-skriftfarve) ;
+    grid-template-rows: repeat(2, 150px);
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+    /* height: 100%;
+    grid-template-rows: repeat(2, 75%); */
+}
+ 
+footer  h4, footer p,  footer a{
+    color: var(--Lys-skriftfarve-på-mørkebrun-baggrund);
+}
+ 
+footer img{
+    /* height: 50%; */
+    /* width: 80%; */
+    max-width: 80%;
+}
+ 
+.CallImg{
+    grid-area: 1 / 1 / 1/ 2;
+    max-width: 60%;
+}
+.Call{
+    grid-area: 1 / 2 / 2/ 3;
+}
+ 
+.EmailImg{
+    grid-area: 1 / 3 / 2/ 4;
+}
+.Email{
+    grid-area: 1 / 4 / 2/ 5;
+}
+ 
+.OpningImg{
+    grid-area: 2 / 1 / 3/ 2;
+}
+.Opning{
+    grid-area: 2 / 2 / 3/ 3;
+}
+ 
+.photoImg{
+    grid-area: 2 / 3 / 3/ 4;
+}
+.photo{
+    grid-area: 2 / 4 / 3/ 5;
+}
+
+.slideshow-container {
+    display: none;
+}
+
+  
+    @media (min-width: 1024px){
+      img{
+          width: 100%;
+    }
+
+
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+      
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+
+
+    /*  to løsninger */
+
+    /* nav
+    {
+        display: flex;
+    }
+
+    nav img 
+    {
+        justify-content: flex-end;
+    } */
+
+
+    /* nav img 
+    {
+        left: 80vw;
+    } */
+
+  }
+  
+  
+
+  
+  

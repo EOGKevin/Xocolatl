@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xocolatl.com</title>
+    <link rel="stylesheet" href="../style.css   ">
+</head>
+<body>
+    <header>
+        <img class="logo" onclick="GoHome()" src="../img/Xocolatl-logo.png">
+ 
+        <nav class="MenuNav">
+            <img class="Menu" onclick="ShowUl()" src="../img/bars-solid-white.png" alt="menu icon">
+            <!-- <img class="Close" onclick="removeUl()" src="../img/times-solid-white.png" alt="menu closeicon"> -->
+            <ul >
+                <li class="Navgiason"><a href="blog.html">The Xocolatl Blog</a>
+                    <img src="img/caret-down-solid-white.png">
+                    <ul>
+                        <li><a href="about-cacao-tree.html">About the Cacao tree</a></li>
+                        <li><a href="cacao-nibs.html">Cacao nibs</a></li>
+                        <li><a href="chocolate-and-aztechs.html">Chocolate and Aztechs</a></li>
+                        <li><a href="chocolate-facts.html">Chocolate Facts</a></li>
+                        <li><a href="health-benefits.html">Health benefits</a></li>
+                    </ul>
+                    
+                </li>
+                <li class="begone"><a href="webshop.html">Webshop</a></li>
+                <li class="begone"><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    
+    <div class="slideshow-container">
+        <img src="../img/Banner-1.jpg">
+        <img src="../img/Banner-2.jpg">
+        <img src="../img/Banner-3.jpg">
+        <img src="../img/Banner-4.jpg">
+        <div id="headerarea"></div>
+        <div id="dotarea"></div>
+    </div>
+    
+    <main> 
+        <section>
+            <article>
+                <h1>Welcome to Xocolatl</h1>
+                <p>
+                    To create colorful and tasteful chocolate has always been our passion. We respect the raw materials, the craft, and the tradition of chocolate making but we are also not afraid to experiment with taste, color, and shape - without ever compromising the quality.
+                </p>
+                <p>
+                    Our chocolate is hand crafted in our chocolate workshop in beautiful Christiansfeld - a town of many traditions.
+                </p>
+                <p>
+                    All our products are made from 100% sustainable and organic cocoa as controlled by <a href="https://www.cocoahorizons.org/" target="_blank">Cocoa Horizons</a>.
+                </p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <a href="health-benefits.html">
+                    <img src="../img/health-benefits-forside.jpg">
+                    <p>
+                        7 Proven Health Benefits of Dark Chocolate
+                    </p>
+                </a>
+                <a href="chocolate-facts.html">
+                    <img src="../img/chocolate-facts-forside.jpg">
+                    <p>
+                        Assorted chocolate facts
+                    </p>
+                </a>
+                <a href="about-cacao-tree.html">
+                    <img src="../img/about-cacao-tree-forside.jpg">
+                    <p>
+                        About the Cacao tree
+                    </p>
+                </a>
+            </article>
+        </section>
+    </main>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="../img/Slideshow1.jpg">
+          </div>
+          <div class="mySlides fade">
+            <img src="../img/Slideshow2.jpg" width="100%">
+          </div>
+          <div class="mySlides fade">
+            <img src="../img/Slideshow3.jpg" width="100%">
+          </div>
+          <div class="mySlides fade">
+            <img src="../img/Slideshow4.jpg" width="100%">            
+          </div>
+    </div>
+    <footer>
+        <img class="CallImg" src="../img/Cell-phone-icon-white.png">
+        <section class="Call">
+            <h4>Call us</h4>
+            <p>31 40 12 34</p>
+        </section>
+ 
+        <img class="EmailImg" src="../img/Email-icon-white.png">
+        <section class="Email">
+            <h4>Email us</h4>
+            <p>info@xocolatl.com</p>
+        </section>
+ 
+        <img class="OpningImg" src="../img/shop-icon-white.png">
+        <section class="Opning">
+            <h4>Opening hours</h4>
+            <p>Call support: 8pm - 16pm</p>
+        </section>
+ 
+        <img class="photoImg" src="../img/instagram-icon-white.png">
+        <section class="photo">
+            <h4>Follow us</h4>
+            <a href="#">Xocolatl on Instagram</a>
+        </section>
+    </footer>
+    
+</body>
+</html>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+    function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+    }
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].className = slides[i].className.replace(" active", "");
+      }
+        slides[slideIndex-1].style.display = "block";  
+        slides[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+
+    console.log("teast")
+    let CloseOppen =1;
+ 
+    function ShowUl() {
+    document.querySelector(".Navgiason").classList.toggle("show");
+    document.querySelector(".Menu").classList.toggle("small");
+    document.querySelector(".MenuNav").classList.toggle("extent");
+    
+    if (CloseOppen === 1){
+        document.querySelector(".Menu").src ="../img/times-solid-white.png";
+        CloseOppen = 2
+    }
+    else{
+        document.querySelector(".Menu").src ="../img/bars-solid-white.png";
+        CloseOppen = 1
+    }
+}
+</script>
